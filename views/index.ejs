@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
     <meta name="theme-color" content="#000000">
     <link rel="apple-touch-icon" href="icons/manifest-icon-512.png">
 </head>
+
 <body class="body" onload="copy()">
     <h1>URL SHORTENER</h1>
     <div class="main">
@@ -22,6 +24,7 @@
     <% if (url.link) { %>
         <div class="out">
             <h6>Your shortend url is</h6>
+            <label for="link">PASTE/TYPE LINK HERE</label>
             <input class="a" readonly value="<%= 'https://urlshorte.herokuapp.com/' + url.slug %>" id="text">
         </div>
         <% } %>
@@ -33,13 +36,9 @@
                     content: 'Click to copy!',
                 });
             </script>
-            <script>
+            <script defer>
                 if ('serviceWorker' in navigator) {
-                    window.addEventListener('load', () => {
-                        navigator.serviceWorker.register('/service-worker.js').then(function (registration) {
-                            console.log('service worker registration succeeded:', registration)
-                        });
-                    });
+                    navigator.serviceWorker.register('/service-worker.js');
                 }
             </script>
 </body>
