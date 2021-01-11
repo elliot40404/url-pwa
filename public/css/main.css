@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+.body {
+    background-color: black;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 60px;
+    text-shadow: 5px 5px 10px red;
+    margin: 100px;
+}
+
+.main .form {
+    position: relative;
+}
+
+.main .form input {
+    border: 2px solid yellow;
+    border-radius: 36px;
+    width: 600px;
+    height: 60px;
+    padding: 0px 20px;
+    color: white;
+    font-size: 24px;
+    background: rgba(0, 0, 0, 0.7);
+
+}
+
+.btn {
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    right: 0px;
+    background: black;
+    border: 2px solid yellow;
+    color: green;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.out {
+    margin: 100px;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.out .a {
+    margin: 10px;
+    border: 2px solid blue;
+    border-radius: 36px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: red;
+    cursor: pointer;
+    background: transparent;
+    width: 600px;
+    font-size: 26px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1028px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    .main .form input {
+        width: 400px;
+        font-size: 20px;
+    }
+
+    .out {
+        margin-top: 100px;
+        font-size: 20px;
+    }
+
+    .out .a {
+        width: 300px;
+    }
+}
