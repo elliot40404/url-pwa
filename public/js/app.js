@@ -4,7 +4,6 @@ function copy() {
     try {
         navigator.clipboard.writeText(textc);
     } catch (e) {
-        console.log(e);
         text.select();
         text.setSelectionRange(0, 99999);
         document.execCommand("copy");

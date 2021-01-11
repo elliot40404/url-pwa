@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@font-face {
+    font-family: Poppins;
+    src: url(./fonts/Poppins-Medium.ttf);
+    font-display: swap;
+}
 
 * {
     padding: 0%;
@@ -8,7 +12,7 @@
 .body {
     background-color: black;
     color: white;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', 'Arial', sans-serif;
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -24,6 +28,10 @@ h1 {
 
 .main .form {
     position: relative;
+}
+
+.main .form .label {
+    display: none;
 }
 
 .main .form input {
@@ -80,7 +88,7 @@ h1 {
     }
 
     .main .form input {
-        width: 400px;
+        width: 360px;
         font-size: 20px;
     }
 
